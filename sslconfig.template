@@ -1,0 +1,22 @@
+[ req ]
+default_md = sha256
+default_bits = 2048
+distinguished_name = req_distinguished_name
+prompt="no"
+
+[ req_distinguished_name ]
+CN = {{Common_Name}}
+emailAddress = {{Contact_Email}}
+O = XXXXX
+OU = YYYYYY
+ST = ZH
+L = Delft
+C = NL
+
+[ client ]
+basicConstraints = CA:FALSE
+nsCertType = client, email
+nsComment = "OpenSSL Client Certificate"
+keyUsage = critical, nonRepudiation, digitalSignature, keyEncipherment
+extendedKeyUsage = clientAuth, emailProtection
+
